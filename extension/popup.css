@@ -1,0 +1,189 @@
+body {
+    width: 300px;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+    transition: background 0.5s ease;
+}
+
+h1 {
+    font-size: 14px;
+    color: #b3b3b3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#song-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#track-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+#artist-name {
+    font-size: 14px;
+    color: #b3b3b3;
+    margin: 0;
+}
+
+.primary-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1db954;
+    /* Spotify Green */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.primary-btn:hover {
+    background-color: #1ed760;
+    transform: scale(1.02);
+}
+
+.secondary-btn {
+    width: 100%;
+    padding: 8px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.lyrics-scroll {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Custom scrollbar for Webkit */
+.lyrics-scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.lyrics-scroll::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+.lyrics-scroll::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.lyrics-scroll::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Modal styles */
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #181818;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #333;
+    width: 80%;
+    max-width: 250px;
+    border-radius: 8px;
+    position: relative;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.settings-toggle {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 12px;
+    color: #535353;
+    cursor: pointer;
+}
+
+.settings-toggle:hover {
+    color: #b3b3b3;
+}
+
+#settings-panel {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #282828;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    background-color: #282828;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+.small-text {
+    font-size: 10px;
+    color: #777;
+    margin-top: 2px;
+}
+
+#status-msg {
+    color: #1db954;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+}

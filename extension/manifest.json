@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "Spotify Genius Annotations",
+    "version": "1.0",
+    "description": "Get Genius annotations for the currently playing Spotify song.",
+    "permissions": [
+        "storage",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://api.genius.com/*",
+        "https://genius.com/*",
+        "https://*.scdn.co/*",
+        "https://*.spotifycdn.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://open.spotify.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Spotify Genius Annotations"
+    }
+}

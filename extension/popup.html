@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotify Genius</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Circular+Std&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Now Playing</h1>
+        <div id="song-info">
+            <h2 id="track-name">Loading...</h2>
+            <p id="artist-name">...</p>
+        </div>
+
+        <button id="load-lyrics-btn" class="primary-btn">Load Lyrics</button>
+        <div id="lyrics-content" class="lyrics-scroll hidden"></div>
+        <div id="loading-spinner" class="hidden">Loading...</div>
+
+        <!-- Annotation Modal -->
+        <div id="annotation-modal" class="modal hidden">
+            <div class="modal-content">
+                <span id="close-modal" class="close">&times;</span>
+                <div id="annotation-text">Loading annotation...</div>
+            </div>
+        </div>
+
+        <div class="settings-toggle">
+            <span id="settings-icon">Settings</span>
+        </div>
+
+        <div id="settings-panel" class="hidden">
+            <label for="genius-token">Genius Access Token (Optional):</label>
+            <input type="text" id="genius-token" placeholder="Paste your token here">
+            <p class="small-text">Required for direct song matching. Without it, we'll open a search page.</p>
+            <button id="save-token-btn" class="secondary-btn">Save Token</button>
+            <p id="status-msg"></p>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
